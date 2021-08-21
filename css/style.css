@@ -1,3 +1,7 @@
+* {
+    font-family: Inter;
+}
+
 body {
     background-image: url("../assets/brown-background.jpg");
     background-color: #E4B57D;
@@ -20,4 +24,32 @@ html, body { min-height: 100%; }
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    text-align: left;
+    color: #A9845C;
+    font-size: 14px;
+    padding: 0 0 32px 32px;
+    font-weight: 500;
+}
+
+.footer-link {
+    margin-left: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #A9845C;
+}
+
+a:hover {
+    color: #2B733D;
+}
+
+.copyright {
+    padding-top: 10px;
 }
