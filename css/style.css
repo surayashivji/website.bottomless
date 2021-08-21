@@ -1,0 +1,23 @@
+body {
+    background-image: url("../assets/brown-background.jpg");
+    background-color: #E4B57D;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+html, body { min-height: 100%; }
+
+#fixed-leaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#fixed-lines {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
