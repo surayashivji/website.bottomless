@@ -89,6 +89,7 @@ a:hover {
 
 body,
 #singular-form button,
+#success,
 .btn-container>#singular-form>#input-container>input {
     font-size: 28px;
     font-weight: 500;
@@ -101,7 +102,7 @@ button.join-waitlist-btn {
 .btn-container {
     width: 5rem;
     height: 5rem;
-    opacity: 0;
+    /* opacity: 0; */
     padding: 10px;
     background-color: var(--main-color);
     text-align: center;
@@ -173,7 +174,6 @@ button.join-waitlist-btn {
     justify-content: center;
     align-items: center;
     color: var(--accent-color);
-    font-weight: bold;
     z-index: 1;
 }
 

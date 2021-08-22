@@ -12,19 +12,28 @@ const phone = document.getElementById('phone-input');
 
 sf.submitDelay = 1500;
 
-window.onload = (event) => {
-    sf.container.style.width = '85vw'
-    // event.target.classList.remove('shown');
+// window.onload = (event) => {
+//     // sf.container.style.width = '85vw'
+//     sf.container.style.width = '15rem'
+//     // event.target.classList.remove('shown');
+//     sf.input.classList.add('shown');
+//     sf.submitButton.classList.add('shown');
+//     sf.container.style.opacity = '1'
+//     sf.input.focus();
+//  };
+
+sf.onLoadClick = (e) => {
+    sf.container.style.width = '37rem'
+    sf.trigger.classList.remove('shown');
     sf.input.classList.add('shown');
     sf.submitButton.classList.add('shown');
     sf.container.style.opacity = '1'
     sf.input.focus();
- };
+}
 
 sf.clickHandler = (e) => {
     switch (e.target) {
         case sf.trigger:
-            // console.log('case trigger');
             // sf.container.style.width = '37rem'
             // e.target.classList.remove('shown');
             // sf.input.classList.add('shown');
@@ -53,6 +62,7 @@ sf.submitForm = () => {
     sf.container.style.transition = 'all .4s cubic-bezier(0.47, 0.47, 0.27, 1.20) .4s';
     sf.container.style.width = '';
     sf.successMessage.classList.add('shown');
+    sf.container.style.width = '18rem'
     let submission = setTimeout(() => sf.form.submit(), sf.submitDelay);
 }
 
@@ -67,4 +77,7 @@ phone.addEventListener("keydown", (e) => {
 });
 
 sf.input.addEventListener('keypress', (e) => sf.handleInputKeypress(e));
-document.addEventListener('click', (e) => sf.clickHandler(e));
+window.addEventListener('click', (e) => sf.clickHandler(e));
+
+
+window.addEventListener('load', (e) => sf.onLoadClick(e));
