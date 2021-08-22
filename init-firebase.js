@@ -1,14 +1,27 @@
- // Firebase configuration
- var firebaseConfig = {
-    apiKey: "AIzaSyBWsdsXmzbOX4eiAGf4vsG8nPMderdP2Sw",
-    authDomain: "hags-landing-page.firebaseapp.com",
-    databaseURL: "https://hags-landing-page.firebaseio.com",
-    projectId: "hags-landing-page",
-    storageBucket: "hags-landing-page.appspot.com",
-    messagingSenderId: "442455837328",
-    appId: "1:442455837328:web:5ea96143daad87e3732615"
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+//   var firebaseConfig = {
+//     apiKey: "AIzaSyB_ced-rjUp1XllH9Ok2A0pZQB-RxOeryY",
+//     authDomain: "bottomless-f85c1.firebaseapp.com",
+//     projectId: "bottomless-f85c1",
+//     storageBucket: "bottomless-f85c1.appspot.com",
+//     messagingSenderId: "192067594646",
+//     appId: "1:192067594646:web:93e736823c568ba82ed5b7",
+//     measurementId: "G-FQY94K4YVK"
+//   };
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyB_ced-rjUp1XllH9Ok2A0pZQB-RxOeryY",
+    authDomain: "bottomless-f85c1.firebaseapp.com",
+    projectId: "bottomless-f85c1",
+    databaseURL: "https://bottomless-f85c1-default-rtdb.firebaseio.com/",
+    storageBucket: "bottomless-f85c1.appspot.com",
+        messagingSenderId: "192067594646",
+    appId: "1:192067594646:web:93e736823c568ba82ed5b7",
+    measurementId: "G-FQY94K4YVK"
   };
+
+
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
-  
+  firebase.analytics();

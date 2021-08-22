@@ -78,15 +78,20 @@ sf.submitForm = () => {
     }
 }
 
+function onSignupComplete() {
+    console.log("done")
+}
+
 function submitPhoneToFirebase(formObj) {
-    // var myFirebaseRef = firebase.database().ref("phone-numbers");
-    // var phoneSubmission = formObj.phone.value; 
-    // var cleanedNumber = phoneSubmission.replace(/[- )(]/g,'');
-    // myFirebaseRef.push({
-    //     number: cleanedNumber,
-    // }, onSignupComplete);
-    // signupBtn.disabled = true;
-    // return false;
+    var database = firebase.database();
+    var myFirebaseRef = database.ref("phone-numbers");
+    var phoneSubmission = formObj.phone.value; 
+    // var phoneSubmission = document.getElementById('singular-form');
+    var cleanedNumber = phoneSubmission.replace(/[- )(]/g,'');
+    myFirebaseRef.push({
+        number: cleanedNumber,
+    }, onSignupComplete);
+    return false;
 }
 
 sf.input.addEventListener('keypress', (e) => sf.handleInputKeypress(e));

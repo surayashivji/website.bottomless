@@ -65,6 +65,22 @@ a:hover {
     color: #2B733D;
 }
 
+.social-icons {
+    opacity: 0.35;
+    padding-bottom: 10px;
+}
+
+.btn-scale:hover {
+	transform: scale(1.15) rotate(-6deg);
+	-webkit-transform: rotate(-6deg) scale(1.15); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(-6deg) scale(1.15); /* IE 9 */
+}
+
+.btn-scale {
+	font-weight: 600;
+	transition: all .2s ease-in-out;
+}
+
 .copyright {
     padding-top: 10px;
 }
