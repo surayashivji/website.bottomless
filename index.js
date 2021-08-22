@@ -13,7 +13,7 @@ const phone = document.getElementById('phone-input');
 sf.submitDelay = 1500;
 
 window.onload = (event) => {
-    sf.container.style.width = '37rem'
+    sf.container.style.width = '85vw'
     // event.target.classList.remove('shown');
     sf.input.classList.add('shown');
     sf.submitButton.classList.add('shown');
@@ -59,13 +59,10 @@ sf.submitForm = () => {
 phone.addEventListener("keydown", (e) => {
     if(e.key === "Backspace" || e.key === "Delete") return;
     if(e.target.value.length === 3) {
-        phone.value = phone.value + "-";
+        phone.value += " ";
     }
     if(e.target.value.length === 7) {
-        phone.value = phone.value + "-";
-    }
-    if(e.target.value.length === 14) {
-        phone.value = phone.value + "-";
+        phone.value += " ";
     }
 });
 

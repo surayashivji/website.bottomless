@@ -25,6 +25,16 @@ html, body { min-height: 100%; }
     left: 0;
 }
 
+.logo-type {
+    position: absolute;
+    right: 0;
+    margin: 75px 75px 0 0;
+}
+
+.type-img {
+    width: 250px;
+}
+
 #fixed-lines {
     position: absolute;
     bottom: 0;
@@ -75,22 +85,6 @@ a:hover {
     height: 80vh;
 }
 
-/* Mobile */
-@media (max-width: 767px) {
-    #greens-deco {
-        width: 100px;
-    }
-    #lines-deco {
-        width: 200px;
-    }
-}
-
-/*  Desktop & Tablet */
-@media (min-width: 768px) {
-
-}
-
-
 /* Waitlist Button */
 
 body,
@@ -105,7 +99,7 @@ button.join-waitlist-btn {
 }
 
 .btn-container {
-    width: 5em;
+    width: 5rem;
     height: 5rem;
     opacity: 0;
     padding: 10px;
@@ -128,7 +122,7 @@ button.join-waitlist-btn {
 }
 
 .btn-container>#singular-form button {
-    width: 9rem;
+    width: 15rem;
     padding: 0;
     border: none;
     outline: none;
@@ -228,4 +222,44 @@ button.join-waitlist-btn {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    #greens-deco {
+        width: 80px;
+    }
+    #lines-deco {
+        width: 180px;
+    }
+    .logo-type {
+        z-index: 1000;
+        position: absolute; 
+        left: 0; 
+        right: 0; 
+        margin: 75px auto 0 auto; 
+        width: 200px;
+    }
+    
+    .type-img {
+        width: 200px;
+    }
+
+    .btn-container>#singular-form button {
+        width: 10rem;
+    }
+
+    #singular-form button,
+    .btn-container>#singular-form>#input-container>input {
+    font-size: 16px;
+    font-weight: 500;
+    }
+    .btn-container {
+        height: 2.75rem;
+    }
+}
+
+/*  Desktop & Tablet */
+@media (min-width: 768px) {
+
 }
