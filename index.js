@@ -7,7 +7,6 @@ sf.input = document.querySelector('.btn-container>#singular-form>#input-containe
 sf.submitButton = document.querySelector('.btn-container > #singular-form > #input-container > button');
 sf.successMessage = document.querySelector('.btn-container > #singular-form > #success');
 
-
 const phone = document.getElementById('phone-input');
 
 sf.submitDelay = 1500;
@@ -69,7 +68,9 @@ sf.submitForm = () => {
         sf.container.style.width = '';
         sf.successMessage.classList.add('shown');
         sf.container.style.width = '18rem'
-        let submission = setTimeout(() => sf.form.submit(), sf.submitDelay);
+
+        var phoneSubmissionForm = document.getElementById('singular-form');
+        let submission = setTimeout(() => submitPhoneToFirebase(phoneSubmissionForm), sf.submitDelay);
     } else {
         var errorLabel = document.getElementById('error-msg');
         errorLabel.style.visibility = 'visible';
@@ -77,7 +78,17 @@ sf.submitForm = () => {
     }
 }
 
+function submitPhoneToFirebase(formObj) {
+    // var myFirebaseRef = firebase.database().ref("phone-numbers");
+    // var phoneSubmission = formObj.phone.value; 
+    // var cleanedNumber = phoneSubmission.replace(/[- )(]/g,'');
+    // myFirebaseRef.push({
+    //     number: cleanedNumber,
+    // }, onSignupComplete);
+    // signupBtn.disabled = true;
+    // return false;
+}
+
 sf.input.addEventListener('keypress', (e) => sf.handleInputKeypress(e));
 window.addEventListener('click', (e) => sf.clickHandler(e));
-
 window.addEventListener('load', (e) => sf.onLoadClick(e));
